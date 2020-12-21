@@ -1,0 +1,1 @@
+ <view class="sign-setting-border {{item.isSelect?'selected':''}}" wx:for="{{applyList}}" wx:key="" bindtap='selectApply'  data-index='{{index}}'>{{item.Item_Name}}</view>

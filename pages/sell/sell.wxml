@@ -1,0 +1,53 @@
+<!--pages/sell.wxml-->
+
+<view class="sell_page">
+  <view class="page_hd"><text class="step_title">第一步：拍照或上传二手物品图片</text></view>
+  <view class="image_box">
+    <block wx:key="imgbox" wx:for="{{imagebox}}">
+      <view class="img_box">
+        <image class="image" src="{{item}}"></image>
+        <view class="delete" data-deindex="{{index}}" bindtap="delPic">
+          <image class="image" src="删除筛选项.png"></image>
+        </view>
+      </view>
+    </block>
+    <view class="img_box" bindtap="addPic" wx:if="{{imagebox.length<5}}">
+      <image class="image" src="添加.png"></image>
+    </view>
+  </view>
+  <view class="page_hd"><text class="step_title">第二步：填写商品信息</text></view>
+  <view class="goods_info">
+    <view class="input_info">
+      <text class="info_text" >商品名称：</text>
+      <input class="input" maxlength="6" bindinput="Get_tags"></input>
+    </view>
+    <view class="input_info">
+      <text class="info_text">新旧程度：</text>
+      <input class="input" type="number" maxlength="1" bindinput="Get_percent" placeholder="请输入一个数字代表几成新"
+      placeholder-style="font-size:small"></input>
+    </view>
+    <view class="input_info">
+      <text class="info_text">定价：</text>
+      <input class="input" type="number" bindinput="Get_price" placeholder="请输入一个数字代表商品定价，单位人民币" placeholder-style="font-size:small" maxlength="5"></input>
+    </view>
+    <view class="input_info">
+      <text class="info_text">其他描述：</text>
+      <textarea class="input" placeholder="请添加其他描述，最多100字" placeholder-style="font-size:small"
+      maxlength="100" auto-height="true" bindinput="Get_details"></textarea>
+    </view>  
+  </view>
+  <view class="page_hd"><text class="step_title">第三步：完善买家信息</text></view>
+  <view class="seller_info">
+    <view class="input_info">
+      <text class="info_text">qq号：</text>
+      <input class="input" bindinput="Get_QQ" maxlength="11"></input>
+    </view>
+    <view class="input_info">
+      <text class="info_text">手机号：</text>
+      <input class="input" bindinput="Get_phone" maxlength="11"></input>
+    </view>
+  </view>
+  <view class="submit">
+    <button class="submit_btn" bindtap="submit">提交</button>
+  </view>
+</view>

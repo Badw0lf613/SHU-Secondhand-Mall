@@ -1,0 +1,58 @@
+<!--pages/my_favourite/my_favourite.wxml-->
+<view class="container">
+  <view class="container_load" wx:if="{{is_ready==false}}">
+    <block>
+      <image src="loading.gif" class="image_load"></image>
+      <text class="loading_text">加载中...</text>
+    </block>
+  </view>
+  <view class="goodslist" wx:else>
+    <!--item-->
+    <view class="empty" wx:if="{{goodslist.length==0 || goodslist[0]==undefined}}">
+      <text>\n\n\n\n　　　空空如也，快去搜索二手商品吧！</text>
+    </view>
+    <view wx:else>
+      <block wx:for="{{goodslist}}">
+        <view wx:if="{{item.issell==0}}" class="goods" >
+          <!--左侧图片盒子-->
+          <view>
+            <image src="{{item.photoID[0]}}" class="good-img" bindtap="to_detail" data-id="{{index}}" />
+          </view>
+          <view class="good-cont">
+            <!--上--文字说明-->
+            <view class="goods-navigator">
+              <text class="good-name">{{item.goods_tag}}</text>
+            </view>
+            <view  wx:if="{{item.issell==0}}" class="good-price">
+              <text>￥{{item.price}}, {{item.percent}}成新\n正在卖</text>
+            </view>
+          </view>
+          <view class="delete" bindtap="delete_item" data-id="{{index}}">
+            <image class="delete_img" src="删除筛选项.png"></image>
+          </view>
+        </view>
+        <view wx:else class="grey_goods">
+          <!--左侧图片盒子-->
+          <view>
+            <image src="{{item.photoID[0]}}" class="good-img" />
+          </view>
+          <view class="good-cont">
+            <!--上--文字说明-->
+            <view class="goods-navigator">
+              <text class="good-name">{{item.goods_tag}}</text>
+            </view>
+            <view  wx:if="{{item.issell==1}}" class="good-price">
+              <text>￥{{item.price}}, {{item.percent}}成新\n已下架</text>
+            </view>
+            <view  wx:if="{{item.issell==2}}" class="good-price">
+              <text>￥{{item.price}}, {{item.percent}}成新\n已出售</text>
+            </view>
+          </view>
+          <view class="delete" bindtap="delete_item" data-id="{{index}}">
+            <image class="delete_img" src="删除筛选项.png"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

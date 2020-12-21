@@ -1,0 +1,55 @@
+<!--pages/personal_info.wxml-->
+<view class="page-body">
+  <view class="container_load" wx:if="{{is_ready==false}}">
+    <block>
+      <image src="loading.gif" class="image_load"></image>
+      <text class="loading_text">加载中...</text>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="text_pic">
+      请上传学生证照片
+    </view>
+    <view class="image_box">
+      <block>
+        <view class="img_box" bindtap="addPic" wx:if="{{imagebox.length==0}}">
+          <image class="image" src="/assets/icons/icons_new/相机.png"></image>
+        </view>
+        <view class="img_box" wx:else>
+          <image class="image" src="{{imagebox}}"></image>
+          <view class="delete" bindtap="delPic" wx:if="{{imagebox.length>0}}">
+            <image class="image" src="/assets/icons/icons_new/删除筛选项.png" ></image>
+          </view>  
+        </view>
+      </block>
+    </view>
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <scroll-view class='scr-view'>
+        <view class="input">
+          姓名：
+          <input class="weui-input" name="name" placeholder="请输入姓名" value="{{name}}"/>
+        </view>
+        <view class="input">
+          学号：
+          <input class="weui-input" name="number" placeholder="请输入学号（8位)" value="{{stu_num}}" />
+        </view>
+        <view class="input">
+          联系方式：
+          <view class="weui-cell__bd">
+            <picker bindchange="contact_methodPickerChange" name="origin" name="contact_method" value="{{index}}" range="{{array}}">
+              <view class="weui-input">{{array[index]}}</view>
+            </picker>
+          </view>
+        </view>
+        <view class="input">
+          具体信息：
+          <input class="weui-input" name="contact_info" placeholder="请输入具体信息" value="{{details}}"/>
+        </view>
+        <button style="width:40vw" class='ok_btn' formType='submit'>保存</button>
+        <!-- <view class="btn-submit">
+          <button type="primary" formType="submit">保存</button>
+        </view> -->
+      </scroll-view>
+    </form>
+  </view>
+</view>

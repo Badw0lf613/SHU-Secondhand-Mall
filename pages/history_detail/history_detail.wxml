@@ -1,0 +1,29 @@
+<!--pages/history_detail/history_detail.wxml-->
+<view class="container">
+  <view class="container_load" wx:if="{{is_ready==false}}">
+    <block>
+      <image src="loading.gif" class="image_load"></image>
+      <text class="loading_text">加载中...</text>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="page_hd"><text class="title">交易信息</text></view>
+    <view class="text_box">
+      <text class="text">时间:  {{date}} \n</text>
+      <text class="text">状态：已售出</text>
+    </view>
+    <view class="page_hd"><text class="title">商品信息</text></view>
+    <view class="text_box">
+      <text class="text">商品图片：\n</text>
+      <view class="image_box">
+        <view class="img_box" wx:for="{{photoID}}">
+          <image src="{{item}}" class="image" mode="aspectFill"></image>
+        </view>
+      </view>
+      <text class="text">商品名称：{{tag}}\n</text>
+      <text  class="text">售价：{{price}}  元\n</text>
+      <text  class="text">新旧程度: {{percent}} 成新\n</text>
+      <text  class="text">商品描述：  {{details}}   \n</text>
+    </view>
+  </view>
+</view>

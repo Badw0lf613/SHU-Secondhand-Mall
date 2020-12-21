@@ -1,0 +1,137 @@
+/* pages/personal_info.wxss */
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  
+  /* margin: 30rpx;
+  padding-right: 37rpx; */
+}
+
+.container_load{
+  width: 320px;
+  height: 500px;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.image_load{
+  width: 600rpx;
+  height: 600rpx;
+  margin-top: 200rpx;
+  margin-left: 80rpx;
+}
+
+.loading_text{
+  display: flex;
+  font-size: medium;
+  text-align: center;
+  margin-top: -140rpx;
+  margin-left: 325rpx;
+}
+
+.text_pic {
+  display: flex;
+  flex-direction: row;
+  background: #F9F9F9;
+  height: 55rpx;
+  /* text-align: center; */
+  align-items: center;
+  padding: 30rpx;
+  /* border: 5px solid #fff; */
+}
+
+.image_box{
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #F9F9F9;
+  border: 5px solid #fff;
+  /* border-left: 1rpx solid rgba(117, 116, 116, 
+  0.527);
+  border-bottom: 1rpx solid rgba(117, 116, 116, 
+  0.527);
+  border-left: 1rpx solid rgba(117, 116, 116, 
+  0.527); */
+}
+
+
+.img_box{
+  border: 5rpx;
+  /* border-style: solid; */
+  /* border: 5px solid #fff; */
+  /* border-color: rgba(0, 0, 0, 0.452); */
+  border-radius: 50%;
+  width: 400rpx;
+  height: 400rpx;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  /* margin-left: 35rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx; */
+  position: relative;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+}
+
+.delete{
+  width:50rpx;
+  height:50rpx;
+  border-radius:50%;
+  position:absolute;
+  right:-20rpx;
+  top:-20rpx;
+}
+
+.image_box_read{
+  margin-top: 100rpx;
+  width: 100%;
+  height: 100%;
+}
+
+
+.input {
+  display: flex;
+  flex-direction: row;
+  background: #F9F9F9;
+  height: 55rpx;
+  align-items: center;
+  padding: 30rpx;
+  border: 5px solid #fff;
+}
+
+
+.scr-view{
+  height: 80%;
+  margin-bottom: 180rpx;
+}
+.btn-submit {
+  margin-top: 40rpx;
+}
+
+
+.ok_btn{
+  margin-top: 20rpx;
+  height: 10vw;
+  /* background-color: #09bb07; */
+  /* color: #FFF; */
+  font-size: small;
+  width: 28rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  /* font-size: small;
+  display: flex;
+  width: 128rpx;
+  height: 80rpx;
+  margin-top: 20rpx; */
+}
+

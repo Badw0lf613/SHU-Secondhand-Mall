@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/sell/sell",
+    "pages/buy_search/buy_search",
+    "pages/good/good",
+    "pages/personal_info/personal_info",
+    "pages/history/history",
+    "pages/history_detail/history_detail",
+    "pages/good_detail/good_detail",
+    "pages/revise_goods/revise_goods",
+    "pages/my_favourite/my_favourite",
+    "pages/loading/loading"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#228B22",
+    "navigationBarTitleText": "上大二手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#228B22",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/icons/icons_new/home.png",
+        "selectedIconPath": "assets/icons/icons_new/home_active.png"
+      },
+      {
+        "text": "推荐",
+        "pagePath": "pages/good/good",
+        "iconPath": "assets/icons/icons_new/recommend.png",
+        "selectedIconPath": "assets/icons/icons_new/recommend_active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "assets/icons/icons_new/mine.png",
+        "selectedIconPath": "assets/icons/icons_new/mine_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

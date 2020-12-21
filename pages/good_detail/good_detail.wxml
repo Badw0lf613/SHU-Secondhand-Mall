@@ -1,0 +1,46 @@
+<!--pages/good_detail/good_detail.wxml-->
+<view class="text_pic">
+  <view class="container" wx:if="{{is_ready==false}}">
+    <block>
+      <image src="loading.gif" class="image"></image>
+      <text class="loading_text">加载中...</text>
+    </block>
+  </view>
+  <view wx:else>
+     <scroll-view class='scr-view'>
+    <!-- 轮播图 -->
+      <view class="goods-swiper">
+        <swiper class="slide" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+          <block wx:for="{{photo}}" wx:key="{{index}}">
+            <swiper-item>
+              <image src="{{item}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" bindtap="previewImage" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <!-- end-goods-swiper -->
+      <view class="text_box">
+        <view class="page_hd"><text class="title">卖家信息</text></view>
+        <text class="text">姓名：{{name}}   \n</text>
+        <text class="text">学号：  {{stu_num}} \n</text>
+        <text class="text">qq号：  {{qq}} \n</text>
+        <text class="text">手机号：{{phone}} \n</text>
+      </view>
+      <view class="page_hd"><text class="title">商品信息</text></view>
+      <view class="text_box">
+        <text class="text">商品名称： {{tag}} \n</text>
+        <text  class="text">售价：{{price}}  元\n</text>
+        <text  class="text">新旧程度: {{percent}} 成新\n</text>
+        <text  class="text">商品描述：  {{details}}   \n</text>
+      </view>
+      <view class="user-operation">
+          <view class="cart" bindtap="/加入收藏函数/">
+            <text class="badge" wx:if="{{goods_num>0}}">{{goods_num}}</text>
+            <image src="../../assets/icons/icons_new/收藏.png" />
+          </view>
+          <view class="add-cart" bindtap="go_my_favourite" data-id="{{goods.id}}">加入收藏</view>
+          <view class="btn-buy-now">立即购买</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

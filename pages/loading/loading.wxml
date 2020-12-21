@@ -1,0 +1,8 @@
+<!--pages/loading/loading.wxml-->
+
+<view class="container">
+  <block>
+    <image src="loading.gif" class="image"></image>
+    <text class="loading_text">加载中...</text>
+  </block>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/history/history.wxml-->
+<view class="container">
+  <view class="history_box">
+    <view class="container_load" wx:if="{{is_ready==false}}">
+      <block>
+        <image src="loading.gif" class="image"></image>
+        <text class="loading_text">加载中...</text>
+      </block>
+    </view>
+    <view wx:else>
+      <view wx:if="{{history.length==0}}">
+        <text>\n\n\n\n　　　空空如也，快去搜索二手商品吧！</text>
+      </view>
+      <block wx:for="{{history}}" wx:for-item="item">
+        <view class="history_item">
+          <view class="text_box">
+            <text class="history_text">时间：{{item.date}}\n</text>
+              <view wx:if="{{item.issell==0}}">
+                <text class="history_text">状态：正在出售\n</text>
+              </view>
+              <view wx:if="{{item.issell==1}}">
+                <text class="history_text">状态：已下架\n</text>
+              </view>
+              <view wx:if="{{item.issell==2}}">
+                <text class="history_text">状态：已售出\n</text>
+              </view>
+            <text class="history_text">商品：{{item.goods_tag}}</text>
+          </view>
+          <view wx:if="{{item.issell==2 || item.issell==1}}">
+            <view class="delete_btn" bindtap="delete_item" id="{{index}}">
+              <image class="delete_img" src="删除筛选项.png"></image>
+            </view>
+            <view class="one_btn" wx:if="{{item.issell==2}}">
+              <button class="detail_btn" id="{{index}}" data-type="detail"  bindtap="tap">查看详情</button>
+            </view>
+          </view>
+          <view wx:elif="{{item.issell==0}}">
+            <view class="two_btn">
+              <button class="detail_btn" bindtap="tap"   id="{{index}}" data-type="revise">修改信息</button>
+              <button class="detail_btn" 
+              bindtap="tap" id="{{index}}" data-type="sell_done">已成交</button>
+            </view>
+            <view class="out">
+              <button class="out_btn" id="{{index}}" data-type="out" bindtap="tap">下架</button>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view> 
+  </view>
+</view>

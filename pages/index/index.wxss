@@ -1,0 +1,152 @@
+/**index.wxss**/
+
+.container{
+  width:100%;
+  height: 500px;
+  min-height:100%;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.container_load{
+  width: 320px;
+  height: 500px;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.image_load{
+  width: 600rpx;
+  height: 600rpx;
+  margin-top: 200rpx;
+  margin-left: 80rpx;
+}
+
+.loading_text{
+  display: flex;
+  font-size: medium;
+  text-align: center;
+  margin-top: -140rpx;
+  margin-left: 325rpx;
+}
+
+.userinfo {
+  flex-direction: row;
+  width: 96%;
+  margin-left: 13rpx;
+  height: 90rpx;
+  border-bottom: 1rpx solid green;
+}
+
+.swiper_box{
+  width: 96%;
+  height: 400rpx;
+  margin-top: 20rpx;
+  margin-left: 13rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1rpx solid green;
+}
+
+.sell_and_buy{
+  flex-direction: row;
+  display: flex;
+  width: 96%;
+  margin-left: 13rpx;
+  height: 260rpx;
+  border-bottom: 1rpx solid green;
+}
+
+.attention{
+  display:flex;
+  width: 95%;
+  height:300rpx;
+  border: 1rpx solid green;
+}
+
+.attention_image{
+  display: flex;
+  height: 70rpx;
+  width: 70rpx;
+  margin-top: -60rpx;
+  margin-left: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.a_text{
+  display: inline-block;
+  font-size: small;
+  margin-top: 60rpx;
+  margin-left: 140rpx;
+}
+.attention_text{
+  display: flex;
+  font-size: small;
+  margin-left: 60rpx;
+}
+
+.sell_block{
+  display:flex;
+  width: 50%;
+  height: 95%;
+}
+
+.buy_block{
+  display: flex;
+  width: 50%;
+  height: 95%;
+  border-right: 1rpx solid green;
+}
+.sell{
+  display: flex;
+  height: 140rpx;
+  width: 140rpx;
+  margin-top: 30rpx;
+  margin-left: 113rpx;
+}
+
+.sell_text{
+  font-size: small;
+  margin-top: 170rpx;
+  margin-left: -113rpx;
+}
+
+.buy{
+  display: flex;
+  height: 150rpx;
+  width: 150rpx;
+  margin-top: 30rpx;
+  margin-left: 100rpx;
+}
+
+.buy_text{
+  font-size: small;
+  margin-top: 170rpx;
+  margin-left: -113rpx;
+}
+
+.slide{
+  width: 90%;
+  height: 380rpx;
+  margin-left: 37rpx;
+  box-sizing: border-box;
+}
+
+
+.userinfo-avatar {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  display: inline-block;
+  display: flex;
+  color: green;
+  font-size: small;
+  margin-left: 120rpx;
+  margin-top: -60rpx;
+}

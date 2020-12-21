@@ -1,0 +1,60 @@
+<!--pages/revise_goods/revise_goods.wxml-->
+<view class="sell_page">
+  <view class="container_load" wx:if="{{is_ready==false}}">
+    <block>
+      <image src="loading.gif" class="image_load"></image>
+      <text class="loading_text">加载中...</text>
+    </block>
+  </view>
+  <view wx:else>
+    <view class="page_hd"><text class="step_title">二手商品图片</text></view>
+    <view class="image_box">
+      <block wx:key="imgbox" wx:for="{{imagebox}}">
+        <view class="img_box" >
+          <image class="image" src="{{item}}"></image>
+          <view class="delete" data-deindex="{{index}}" bindtap="delPic">
+            <image class="image" src="删除筛选项.png"></image>
+          </view>
+        </view>
+      </block>
+      <view class="img_box" bindtap="addPic" wx:if="{{imagebox.length<5}}">
+        <image class="image" src="添加.png"></image>
+      </view>
+    </view>
+    <view class="page_hd"><text class="step_title">商品信息</text></view>
+    <view class="goods_info">
+      <view class="input_info">
+        <text class="info_text">商品名称：</text>
+        <input class="input" value= "{{goods_tag}}" bindinput="Get_tags">{{goods_tag}}</input>
+      </view>
+      <view class="input_info">
+        <text class="info_text">新旧程度：</text>
+        <input class="input" bindinput="Get_percent" value="{{percent}}"></input>
+      </view>
+      <view class="input_info">
+        <text class="info_text">定价：</text>
+        <input class="input" bindinput="Get_price" value="{{price}}"></input>
+      </view>
+      <view class="input_info">
+        <text class="info_text">其他描述：</text>
+        <textarea class="input" placeholder="请添加其他描述，最多100字" value="{{details}}" placeholder-style="font-size:small"
+        maxlength="100" auto-height="true" bindinput="Get_details"></textarea>
+      </view>  
+    </view>
+    <view class="page_hd"><text class="step_title">卖家信息</text></view>
+    <view class="seller_info">
+      <view class="input_info">
+        <text class="info_text">qq号：</text>
+        <input class="input" bindinput="Get_QQ"  value="{{QQ_number}}"></input>
+      </view>
+          <view class="input_info">
+        <text class="info_text">手机号：</text>
+        <input class="input" bindinput="Get_phone" value="{{Phone_number}}"></input>
+      </view>
+    </view>
+    <view class="submit">
+      <button class="submit_btn" bindtap="submit">提交</button>
+    </view>
+  </view>
+
+</view>
