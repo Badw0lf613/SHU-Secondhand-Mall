@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<!-- 我在这里试试git -->
+<!-- 我在这里试试git哦 -->
 <scroll-view class="container">
   <view class="container_load" wx:if="{{is_ready==false}}">
     <block>
