@@ -1,128 +1,130 @@
 {
-	"cloudfunctionRoot": "functions/",
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.12.0",
-	"appid": "wx290616353398cd91",
-	"projectname": "B04%E6%BA%90%E4%BB%A3%E7%A0%81",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"scripts": {},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/personal_info/personal_info",
-					"pathName": "pages/personal_info/personal_info",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/history_detail/history_detail",
-					"pathName": "pages/history_detail/history_detail",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/my_favourite/my_favourite",
-					"pathName": "pages/my_favourite/my_favourite",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/buy_search/buy_search",
-					"pathName": "pages/buy_search/buy_search",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/buy_search/buy_search",
-					"pathName": "pages/good_copy/good",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/good/good",
-					"pathName": "pages/good/good",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/good_detail/good_detail",
-					"pathName": "pages/good_detail/good_detail",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "cloudfunctionRoot": "functions/",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.12.0",
+  "appid": "wx290616353398cd91",
+  "projectname": "B04%E6%BA%90%E4%BB%A3%E7%A0%81",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/personal_info/personal_info",
+          "pathName": "pages/personal_info/personal_info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/history_detail/history_detail",
+          "pathName": "pages/history_detail/history_detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my_favourite/my_favourite",
+          "pathName": "pages/my_favourite/my_favourite",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/buy_search/buy_search",
+          "pathName": "pages/buy_search/buy_search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/buy_search/buy_search",
+          "pathName": "pages/good_copy/good",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/good/good",
+          "pathName": "pages/good/good",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/good_detail/good_detail",
+          "pathName": "pages/good_detail/good_detail",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
